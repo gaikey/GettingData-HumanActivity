@@ -1,0 +1,124 @@
+Notes: 
+======
+- Features are normalized and bounded within [-1,1].
+- Each feature vector is a row on the text file.
+- The units used for the accelerations (total and body) are 'g's (gravity of earth -> 9.80665 m/seg2).
+- The gyroscope units are rad/seg.
+
+
+The factor variables in the data set are "subject" and "activity"
+The "activity" values measure, which are self-explanatory, are:
+- LAYING
+- SITTING
+- STANDING
+- WALKING
+- WALKING_DOWNSTAIRS
+- WALKING_UPSTAIRS
+The "subject" variable is simply a number (as a factor) that identifies the subject associated with the measurements
+
+The other 66 variables are numeric and measured or derived from measurements with an accelerometer or a gyroscope
+
+
+##
+## First Data Set Variables
+##
+
+The 66 numeric variable names can be interpreted based on the following.
+
+The first 4 letters of the variable name indicate whether the measurement is a:
+- time domain signal "Time" or
+- frequency domain signal "Freq"
+
+The acceration signal is separated into "body" and "gravity" components and are identified after the "Time"/"Freq" as
+- body component = "Body"
+- gravity component = "Gravity"
+
+The measurement type from the accelerometer or gyroscope is identified by "Acc" and "Gyro" respectively
+
+For some measurements, the the body linear acceleration and angular velocity were derived in time to obtain Jerk signals identified by "Jerk"
+
+Each vector is broken up into x, y and z components identified by a variable ending in "X", "Y" and "Z" respectively
+
+Some measurements are the magnitude of the vector and are calculated using the Euclidean norm and identified by "Mag"
+
+Every measurement is either a mean or standard deviation and identified by "Mean" or "Stddev" respectively
+
+
+subject			A number from 1-30 representing a particular individual. It is a factor variable
+activity		One of six activities measured (LAYING, SITTING, STANDING, WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS
+TimeBodyAccMeanX
+TimeBodyAccMeanY
+TimeBodyAccMeanZ
+TimeGravityAccMeanX
+TimeGravityAccMeanY
+TimeGravityAccMeanZ
+TimeBodyAccJerkMeanX
+TimeBodyAccJerkMeanY
+TimeBodyAccJerkMeanZ
+TimeBodyGyroMeanX
+TimeBodyGyroMeanY
+TimeBodyGyroMeanZ
+TimeBodyGyroJerkMeanX
+TimeBodyGyroJerkMeanY
+TimeBodyGyroJerkMeanZ
+TimeBodyAccMagMean
+TimeGravityAccMagMean
+TimeBodyAccJerkMagMean
+TimeBodyGyroMagMean
+TimeBodyGyroJerkMagMean
+FreqBodyAccMeanX
+FreqBodyAccMeanY
+FreqBodyAccMeanZ
+FreqBodyAccJerkMeanX
+FreqBodyAccJerkMeanY
+FreqBodyAccJerkMeanZ
+FreqBodyGyroMeanX
+FreqBodyGyroMeanY
+FreqBodyGyroMeanZ
+FreqBodyAccMagMean
+FreqBodyBodyAccJerkMagMean
+FreqBodyBodyGyroMagMean
+FreqBodyBodyGyroJerkMagMean
+TimeBodyAccStddevX
+TimeBodyAccStddevY
+TimeBodyAccStddevZ
+TimeGravityAccStddevX
+TimeGravityAccStddevY
+TimeGravityAccStddevZ
+TimeBodyAccJerkStddevX
+TimeBodyAccJerkStddevY
+TimeBodyAccJerkStddevZ
+TimeBodyGyroStddevX
+TimeBodyGyroStddevY
+TimeBodyGyroStddevZ
+TimeBodyGyroJerkStddevX
+TimeBodyGyroJerkStddevY
+TimeBodyGyroJerkStddevZ
+TimeBodyAccMagStddev
+TimeGravityAccMagStddev
+TimeBodyAccJerkMagStddev
+TimeBodyGyroMagStddev
+TimeBodyGyroJerkMagStddev
+FreqBodyAccStddevX
+FreqBodyAccStddevY
+FreqBodyAccStddevZ
+FreqBodyAccJerkStddevX
+FreqBodyAccJerkStddevY
+FreqBodyAccJerkStddevZ
+FreqBodyGyroStddevX
+FreqBodyGyroStddevY
+FreqBodyGyroStddevZ
+FreqBodyAccMagStddev
+FreqBodyBodyAccJerkMagStddev
+FreqBodyBodyGyroMagStddev
+FreqBodyBodyGyroJerkMagStddev
+
+
+
+##
+## Second Data Set Variables
+##
+
+The second data set aggregates the data set described above by the factor features "activity" and "subject"
+The value for the 66 numeric features is the average by the "activity" and "subject"
+There are 35 rows returned representing the unique "activity"/"subject" combinations
